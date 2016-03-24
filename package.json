@@ -4,6 +4,7 @@
   "description": "A tiny constructor for deferred objects. Useful for stubbing promises in tests.",
   "main": "index.umd.js",
   "jsnext:main": "index.js",
+  "repository": "qubyte/es2015-deferred",
   "scripts": {
     "test": "npm run build && tape test.js && npm run clean",
     "build": "rollup -f umd -n Deferred index.js -o index.umd.js",
