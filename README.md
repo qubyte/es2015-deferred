@@ -1,5 +1,7 @@
 # ES2015 Deferred
 
+[![Build Status](https://travis-ci.org/qubyte/es2015-deferred.svg?branch=master)](https://travis-ci.org/qubyte/es2015-deferred)
+
 This library contains a small constructor which produces deferred objects. These
 are useful for testing purposes, and their use in production JS is discouraged
 (it's usually better to use the promise constructor directly).
@@ -41,4 +43,12 @@ Reject `deferred.promise` with an error.
 
 ```javascript
 deferred.reject(new Error('Oh noes!'));
+```
+
+If you prefer to avoid constructors, you can!
+
+```javascript
+var createDeferred = require('es2015-deferred');
+
+var deferred = createDeferred();
 ```
