@@ -1,6 +1,6 @@
 {
   "name": "es2015-deferred",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny constructor for deferred objects. Useful for stubbing promises in tests.",
   "main": "index.umd.js",
   "jsnext:main": "index.js",
