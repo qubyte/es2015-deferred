@@ -32,7 +32,7 @@ test('instances have a reject property, which is a method', t => {
 });
 
 test('the promise property is resolved with a value when the resolve property is called with that value', t => {
-  var deferred = new Deferred();
+  const deferred = new Deferred();
 
   deferred.resolve('resolution-value');
 
@@ -44,8 +44,15 @@ test('the promise property is resolved with a value when the resolve property is
     .catch(err => t.end(err));
 });
 
+test('resolve returns the promise', t => {
+  const deferred = new Deferred();
+
+  t.equals(deferred.resolve('resolution-value'), deferred.promise);
+  t.end();
+});
+
 test('the promise property is rejected with a value when the reject property is called with that value', t => {
-  var deferred = new Deferred();
+  const deferred = new Deferred();
 
   deferred.reject('rejection-value');
 
@@ -57,4 +64,11 @@ test('the promise property is rejected with a value when the reject property is 
         t.end();
       }
     );
+});
+
+test('reject returns the promise', t => {
+  const deferred = new Deferred();
+
+  t.equals(deferred.reject('rejection-value'), deferred.promise);
+  t.end();
 });

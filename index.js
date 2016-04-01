@@ -1,12 +1,19 @@
 export default function Deferred() {
-  if (!(this instanceof Deferred)) {
+  var deferred = this;
+
+  if (!(deferred instanceof Deferred)) {
     return new Deferred();
   }
 
-  var deferred = this;
+  deferred.promise = new Promise(function (resolve, reject) {
+    deferred.resolve = function (value) {
+        resolve(value);
+        return deferred.promise;
+    };
 
-  this.promise = new Promise(function (resolve, reject) {
-    deferred.resolve = resolve;
-    deferred.reject = reject;
+    deferred.reject = function (error) {
+        reject(error);
+        return deferred.promise;
+    };
   });
 }
