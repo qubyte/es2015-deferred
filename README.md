@@ -27,7 +27,7 @@ Create a deferred object.
 var deferred = new Deferred();
 ```
 
-The promise managed by the deferred object.
+The promise is managed by the deferred object.
 
 ```javascript
 var promise = deferred.promise;
@@ -43,6 +43,12 @@ Reject `deferred.promise` with an error.
 
 ```javascript
 deferred.reject(new Error('Oh noes!'));
+```
+
+Resolve and reject return the promise for easy chaining, e.g.
+
+```javascript
+deferred.resolve('a-resolution').then(/* ... */);
 ```
 
 If you prefer to avoid constructors, you can!
