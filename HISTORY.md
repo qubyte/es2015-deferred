@@ -1,5 +1,9 @@
 # History
 
+## 2.0.1
+
+Documentation update.
+
 ## 2.0.0
 
 The `resolve` and `reject` methods now return the promise, for simpler chaining.
