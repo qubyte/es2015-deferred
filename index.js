@@ -7,13 +7,13 @@ export default function Deferred() {
 
   deferred.promise = new Promise(function (resolve, reject) {
     deferred.resolve = function (value) {
-        resolve(value);
-        return deferred.promise;
+      resolve(value);
+      return deferred.promise;
     };
 
     deferred.reject = function (error) {
-        reject(error);
-        return deferred.promise;
+      reject(error);
+      return deferred.promise;
     };
   });
 }
