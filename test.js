@@ -1,3 +1,5 @@
+/* eslint-env commonjs */
+
 const test = require('tape');
 const Deferred = require('./');
 
@@ -12,7 +14,7 @@ test('it returns an instance of Deferred when called with new', t => {
 });
 
 test('it returns an instance of Deferred when called without new', t => {
-  t.ok(Deferred() instanceof Deferred);
+  t.ok(Deferred() instanceof Deferred); // eslint-disable-line new-cap
   t.end();
 });
 
