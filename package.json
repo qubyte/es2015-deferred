@@ -6,6 +6,7 @@
   "jsnext:main": "index.js",
   "repository": "qubyte/es2015-deferred",
   "scripts": {
+    "lint": "eslint .",
     "test": "npm run build && tape test.js && npm run clean",
     "build": "rollup -f umd -n Deferred index.js -o index.umd.js",
     "clean": "rimraf index.umd.js",
@@ -25,6 +26,8 @@
   "author": "Mark S. Everitt",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "3.4.0",
+    "eslint-config-qubyte": "1.0.1",
     "rimraf": "2.5.2",
     "rollup": "0.25.5",
     "tape": "4.5.1"
