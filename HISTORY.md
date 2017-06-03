@@ -1,5 +1,10 @@
 # History
 
+## 3.0.0
+
+Adds module field to package.json for ES2015 module loaders. This is a major
+version bump since it might affect how existing bundles are built.
+
 ## 2.0.1
 
 Documentation update.
