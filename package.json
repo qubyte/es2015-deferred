@@ -30,7 +30,7 @@
     "eslint": "4.16.0",
     "eslint-config-qubyte": "1.1.0",
     "rimraf": "2.6.2",
-    "rollup": "0.55.0",
+    "rollup": "0.55.1",
     "tape": "4.8.0"
   }
 }
