@@ -27,7 +27,7 @@
   "author": "Mark S. Everitt",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "4.16.0",
+    "eslint": "4.17.0",
     "eslint-config-qubyte": "1.1.0",
     "rimraf": "2.6.2",
     "rollup": "0.55.3",
