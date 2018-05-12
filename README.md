@@ -33,6 +33,13 @@ install another way, you'll need to run `npm install` to generate
 Point a script tag to `index.umd.js`. The `Deferred` constructor will be
 available on the global object.
 
+If you want to try this module out without installation, it can be used via
+unpkg:
+
+```html
+<script src="https://unpkg.com/es2015-deferred"></script>
+```
+
 ### CommonJS
 
 In CommonJS environments which look for a `package.json` file such as Node.js
@@ -51,7 +58,7 @@ Configure your module loader to resolve `Deferred` (or whatever you like) to
 
 ES2015 module loaders can directly consume `index.js`. If you're using
 [rollup](http://rollupjs.org) or another ES2015 compatible module loader
-configured to look for the [`jsnext:main`](./package.json#L6) field and in a
+configured to look for the [`module`](./package.json#L6) field and in a
 `package.json` file, then you can import with:
 
 ```javascript
@@ -61,6 +68,13 @@ import Deferred from 'es2015-deferred';
 The
 [rollup-plugin-node-resolve](https://github.com/rollup/rollup-plugin-node-resolve)
 package may be useful to you.
+
+If you want to try this module out directly without installation, it can be used
+via unpkg:
+
+```javascript
+import Deferred from 'https://unpkg.com/es2015-deferred?module';
+```
 
 ## API
 
