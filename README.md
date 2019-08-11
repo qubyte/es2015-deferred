@@ -2,8 +2,6 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/qubyte/es2015-deferred.svg)](https://greenkeeper.io/)
 
-[![Build Status](https://travis-ci.org/qubyte/es2015-deferred.svg?branch=master)](https://travis-ci.org/qubyte/es2015-deferred)
-
 _Works in any ES5 or above environment with the addition of `Promise` (can be
 shimmed)._
 
