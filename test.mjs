@@ -1,10 +1,10 @@
 /* eslint-env commonjs */
 
-const test = require('tape');
+import test from 'tape';
 
 // Use `npm link`, since this suite is ensuring that package exports are
 // properly configured too.
-const Deferred = require('es2015-deferred');
+import Deferred from 'es2015-deferred';
 
 test('it is a function', t => {
   t.equals(typeof Deferred, 'function');

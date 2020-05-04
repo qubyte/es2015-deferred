@@ -7,7 +7,7 @@ on:
     branches:
     - master
 jobs:
-  test:
+  test-10:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
@@ -17,15 +17,41 @@ jobs:
       with:
         version: 10.x
     - run: npm ci
-    - run: npm test
+    - run: npm link
+    - run: npm run test-cjs
+  test-12:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+    - name: use node 12
+      uses: actions/setup-node@v1
+      with:
+        version: 12.x
+    - run: npm ci
+    - run: npm link
+    - run: npm run test-cjs
+  test-14:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+    - name: use node 14
+      uses: actions/setup-node@v1
+      with:
+        version: 14.x
+    - run: npm ci
+    - run: npm link
+    - run: npm run test-cjs
+    - run: npm run test-esm
   lint:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
       uses: actions/checkout@master
-    - name: use node 10
+    - name: use node 12
       uses: actions/setup-node@v1
       with:
-        version: 10.x
+        version: 12.x
     - run: npm ci
     - run: npm run lint
