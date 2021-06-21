@@ -1,5 +1,9 @@
 # History
 
+## 4.0.1
+
+No changes in behaviour, slightly more compact code.
+
 ## 4.0.0
 
 This module is shipped in ES module format only now. It also assumes an ES2015
