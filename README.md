@@ -1,56 +1,16 @@
 # ES2015 Deferred
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/qubyte/es2015-deferred.svg)](https://greenkeeper.io/)
-
-_Works in any ES5 or above environment with the addition of `Promise` (can be
-shimmed)._
-
 This library contains a small constructor which produces deferred objects. These
 are useful for testing purposes, and their use in production JS is discouraged
 (it's usually better to use the promise constructor directly).
-
-This library assumes that a `Promise` constructor is available, but nothing
-else. Provided `Promise` is a global this module should work everywhere JS does.
-This stretches to the module system you're using. This library contains both a
-UMD module and an ES2015 module, so it works everywhere in that respect too.
 
 This module has no production dependencies.
 
 ## installation
 
-In short, if you're using an environment which supports ES2015 modules, then
-the `index.js` file of this repo is what you want. For anything else (global,
-CommonJS, or AMD) use `index.umd.js`.
-
-If you install this module using npm, then both files will be available. If you
-install another way, you'll need to run `npm install` to generate
-`index.umd.js`.
-
-### browser global
-
-Point a script tag to `index.umd.js`. The `Deferred` constructor will be
-available on the global object.
-
-If you want to try this module out without installation, it can be used via
-unpkg:
-
-```html
-<script src="https://unpkg.com/es2015-deferred"></script>
 ```
-
-### CommonJS
-
-In CommonJS environments which look for a `package.json` file such as Node.js
-and Browserify, install via npm and require:
-
-```javascript
-var Deferred = require('es2015-deferred');
+npm i es2015-deferred
 ```
-
-### AMD
-
-Configure your module loader to resolve `Deferred` (or whatever you like) to
-`index.umd.js`.
 
 ### ES2015
 
@@ -64,7 +24,7 @@ import Deferred from 'es2015-deferred';
 ```
 
 The
-[rollup-plugin-node-resolve](https://github.com/rollup/rollup-plugin-node-resolve)
+[@rollup/plugin-node-resolve](https://github.com/rollup/plugins/tree/master/packages/node-resolve)
 package may be useful to you.
 
 If you want to try this module out directly without installation, it can be used
