@@ -1,5 +1,11 @@
 # History
 
+## 4.0.0
+
+This module is shipped in ES module format only now. It also assumes an ES2015
+or later version of JavaScript. If you need a UMD module or support for an ES5
+environment, use version 3.
+
 ## 3.0.0
 
 Adds module field to package.json for ES2015 module loaders. This is a major

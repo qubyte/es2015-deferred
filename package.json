@@ -2,22 +2,16 @@
   "name": "es2015-deferred",
   "version": "3.0.0",
   "description": "A tiny constructor for deferred objects. Useful for stubbing promises in tests.",
-  "main": "index.umd.js",
+  "main": "index.js",
+  "type": "module",
   "jsnext:main": "index.js",
   "module": "index.js",
   "repository": "qubyte/es2015-deferred",
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run build && tape test.js && npm run clean",
-    "build": "rollup -f umd -n Deferred index.js -o index.umd.js",
-    "clean": "rimraf index.umd.js",
-    "prepublish": "npm run build",
-    "postpublish": "npm run clean"
+    "test": "mocha"
   },
-  "files": [
-    "index.js",
-    "index.umd.js"
-  ],
+  "files": [],
   "keywords": [
     "defer",
     "deferred",
@@ -27,10 +21,8 @@
   "author": "Mark S. Everitt",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^7.1.0",
-    "eslint-config-qubyte": "^3.0.0",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.12.0",
-    "tape": "^5.0.1"
+    "eslint": "^7.29.0",
+    "eslint-config-qubyte": "^4.1.0",
+    "mocha": "^9.0.1"
   }
 }
