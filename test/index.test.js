@@ -1,5 +1,5 @@
 import { strict as assert } from 'assert';
-import Deferred from '../index.js';
+import Deferred from 'es2015-deferred';
 
 describe('Deferred', () => {
   it('is a function', () => {

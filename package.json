@@ -6,6 +6,9 @@
   "type": "module",
   "jsnext:main": "index.js",
   "module": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
   "repository": "qubyte/es2015-deferred",
   "scripts": {
     "lint": "eslint .",

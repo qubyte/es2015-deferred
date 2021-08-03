@@ -1,5 +1,9 @@
 # History
 
+## 4.0.2
+
+Adds an export map.
+
 ## 4.0.1
 
 No changes in behaviour, slightly more compact code.
