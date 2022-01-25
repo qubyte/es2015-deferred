@@ -31,7 +31,7 @@ If you want to try this module out directly without installation, it can be used
 via unpkg:
 
 ```javascript
-import Deferred from 'https://unpkg.com/es2015-deferred?module';
+import Deferred from 'https://unpkg.com/es2015-deferred';
 ```
 
 ## API
