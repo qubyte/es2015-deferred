@@ -1,4 +1,5 @@
-import { strict as assert } from 'assert';
+import { describe, it } from 'node:test';
+import { strict as assert } from 'node:assert';
 import Deferred from 'es2015-deferred';
 
 describe('Deferred', () => {
@@ -59,6 +60,8 @@ describe('Deferred', () => {
       const deferred = new Deferred();
 
       assert.equal(deferred.reject('rejection-value'), deferred.promise);
+
+      return deferred.promise.catch(() => {});
     });
   });
 });

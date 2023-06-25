@@ -12,20 +12,19 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@main
-    - name: use node 16
-      uses: actions/setup-node@v2
+    - name: use node 18
+      uses: actions/setup-node@v3
       with:
-        version: 16.x
-    - run: npm ci
+        version: 18.x
     - run: npm test
   lint:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
       uses: actions/checkout@main
-    - name: use node 16
-      uses: actions/setup-node@v2
+    - name: use node 18
+      uses: actions/setup-node@v3
       with:
-        version: 16.x
+        version: 18.x
     - run: npm ci
     - run: npm run lint
