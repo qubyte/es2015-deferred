@@ -6,6 +6,22 @@ are useful for testing purposes, and their use in production JS is discouraged
 
 This module has no production dependencies.
 
+> [!Note]
+> JavaScript now has a built-in to achieve most of what this module does, and you
+> should use it when possible.
+>
+> ```javascript
+> // Before:
+> const { promise, resolve, reject } = Deferred();
+>
+> // After:
+> const { promise, resolve, reject } = Promise.withResolvers();
+> ```
+>
+> The one nuance to be aware of is that `resolve` and `reject` from this library
+> return `promise`, whereas `resolve` and `reject` from `withResolvers` return
+> `undefined`.
+
 ## installation
 
 ```
