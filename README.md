@@ -1,3 +1,5 @@
+This project has [moved to codeberg](https://codeberg.org/qubyte/es2015-deferred).
+
 # ES2015 Deferred
 
 This library contains a small constructor which produces deferred objects. These
